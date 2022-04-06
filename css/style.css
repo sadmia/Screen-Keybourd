@@ -1,0 +1,102 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: arial;
+	width: 100%;
+	height: 100vh;
+	background-color: #fff;
+	position: relative;
+}
+
+.KeybordSection {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.line1, .line2, .line3, .line4, .Number {
+	width: 100%;
+	height: 50px;
+	background-color: #333;
+}
+
+
+.Number {
+	visibility: hidden;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.line1 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+button {
+	width: 100%;
+	height: 100%;
+	font-size: 20px;
+	color: #fff;
+	background-color: #3330;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+button:active {
+	background-color: #000;
+}
+
+.line2 {
+	display: grid;
+	grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+}
+.line3 {
+	display: grid;
+	grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
+}
+.line4 {
+	display: grid;
+	grid-template-columns: 2fr 1fr 5fr 1fr 2fr;
+}
+
+.bgBtn {
+	background-color: #fff3;
+	border-radius: 5px;
+}
+
+.inputBox {
+	width: 100%;
+	background-color: #fff;
+	margin-bottom: 50px;
+	padding: 20px 20px;
+	color: #333;
+	font-size: 18px;
+	box-sizing: border-box;
+}
+.inputBox span {
+	position: relative;
+}
+.inputBox span:after {
+	position: absolute;
+	content: "";
+	right: -5px;
+	bottom: 0;
+	width: 2px;
+	height: 20px;
+	background-color: #3339;
+	animation: textAni 0.5s infinite;
+}
+
+@keyframes textAni {
+	0%, 10% {
+		opacity: 0;
+	}
+	70%, 100% {
+		opacity: 1;
+	}
+}
